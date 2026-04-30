@@ -1,8 +1,8 @@
 "use client";
 import GoogleLoginBtn from "@/Components/GoogleLoginBtn/GoogleLoginBtn";
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
-import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
+import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
 import { ProgressBar } from "react-loader-spinner";
@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 const LogInPage = () => {
 
     const [loader, setLoader] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     const onSubmit = async (event) => {
         setLoader(true);
@@ -78,12 +79,31 @@ const LogInPage = () => {
                                 return "Password must contain at least one number";
                             }
                             return null;
-                        }}
-                    >
+                        }}>
                         <Label>Password</Label>
-                        <Input placeholder="Enter your Password" autoComplete="current-password" />
+
+                        <InputGroup>
+                            <InputGroup.Input
+                                className="w-full"
+                                placeholder="Enter your Password"
+                                type={isVisible ? "text" : "password"}
+                                autoComplete="current-password"
+                            />
+                            <InputGroup.Suffix className="pr-0">
+                                <Button
+                                    isIconOnly
+                                    size="sm"
+                                    variant="ghost"
+                                    onPress={() => setIsVisible(!isVisible)}
+                                >
+                                    {isVisible ? <Eye className="size-4" /> : <EyeSlash className="size-4" />}
+                                </Button>
+                            </InputGroup.Suffix>
+                        </InputGroup>
+
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
+
                     </TextField>
 
                     <div className="flex gap-2">
