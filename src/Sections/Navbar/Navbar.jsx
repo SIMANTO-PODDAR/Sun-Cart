@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 const Navbar = () => {
-    const LoggedIn = true//false ;
+    const LoggedIn = false//true ;
 
     return (
         <div className="bg-blue-300/70">
