@@ -1,4 +1,5 @@
 "use client";
+import GoogleLoginBtn from "@/Components/GoogleLoginBtn/GoogleLoginBtn";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
@@ -92,6 +93,7 @@ const LogInPage = () => {
                         </Button>
                     </div>
                     <h1 className="font-bold text-center opacity-80">Don’t have an account? <Link href='/register' className="underline italic text-cyan-700 opacity-100">Register</Link></h1>
+                    <GoogleLoginBtn />
                 </Form>
             </div>
 
