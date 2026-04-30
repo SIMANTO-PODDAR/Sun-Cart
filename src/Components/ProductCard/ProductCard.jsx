@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
         <div>
             <div className="card bg-base-100 w-60 sm:w-90 shadow-sm">
                 <figure>
-                    <img src={image} alt={name} />
+                    <img className='overflow-hidden max-h-82' src={image} alt={name} />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title text-[15px] justify-between">
