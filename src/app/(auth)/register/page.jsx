@@ -1,25 +1,55 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { ProgressBar } from "react-loader-spinner";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
 
-    const onSubmit = (event) => {
-        event.preventDefault()
+    const [loader, setLoader] = useState(false);
+
+    const router = useRouter();
+
+    const onSubmit = async (event) => {
+        setLoader(true);
+        event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const photo = event.target.photo.value;
         const password = event.target.password.value;
 
 
-        console.log(name, email, photo, password)
+        const { data, error } = await authClient.signUp.email({
+            name: name,
+            email: email,
+            password: password,
+            image: photo,
+        },
+            {
+                onSuccess: () => {
+                    toast.success("Registration completed successfully.");
+                    setLoader(false);
+                    router.push('/login');
+                }
+            }
+        );
+
+        if (error) {
+            toast.error(error.message)
+        };
+        
+        setLoader(false);
     }
 
     return (
         <div className="mt-2 sm:mt-10 mb-10 sm:mb-0 p-5 sm:p-0">
             <h1 className="text-xl sm:text-3xl text-center font-bold text-cyan-700/70 my-2">Create Your SunCart Account</h1>
 
-            <div className="flex justify-center mt-5">
+            <div className={` justify-center mt-5 ${loader ? 'hidden' : 'flex'}`}>
 
                 <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
 
@@ -96,7 +126,25 @@ const RegisterPage = () => {
                             Register
                         </Button>
                     </div>
+                    <h1 className="font-bold text-center opacity-80">Already have an account? <Link href='/login' className="underline italic text-cyan-700 opacity-100">Log in</Link></h1>
                 </Form>
+            </div>
+
+            <div className={` justify-center mt-5 ${loader ? 'grid' : 'hidden'}`}>
+                <div className="flex justify-center">
+                    <ProgressBar
+                        className="flex justify-center mx-auto"
+                        visible={true}
+                        height="80"
+                        width="80"
+                        color="#4fa94d"
+                        ariaLabel="progress-bar-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                    />
+                </div>
+
+                <h1 className="text-center font-bold text-xl opacity-70">Processing your request.</h1>
             </div>
 
         </div>
