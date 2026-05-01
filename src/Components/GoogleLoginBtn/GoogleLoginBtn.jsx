@@ -17,7 +17,7 @@ const GoogleLoginBtn = () => {
         <div className='flex justify-center'>
             <Button onClick={GoogleLogin} className="bg-blue-300/80">
                 <FcGoogle className='bg-white m-1 scale-150 rounded-full' />
-                <span className=' font-bold text-cyan-700'>Google Login</span></Button>
+                <span className=' font-bold text-cyan-700'>Continue with Google</span></Button>
         </div>
     );
 };

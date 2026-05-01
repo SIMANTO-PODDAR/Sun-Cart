@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
                     <p className='line-clamp-1 opacity-80'>{description}</p>
                     <div className="card-actions justify-between">
                         <div className="btn hover:text-cyan-700 font-bold text-xl">$ {price}</div>
-                        <Link href={`/details/${id}`} className="btn bg-blue-300">Details</Link>
+                        <Link href={`/products/${id}`} className="btn bg-blue-300">Details</Link>
                     </div>
                 </div>
             </div>

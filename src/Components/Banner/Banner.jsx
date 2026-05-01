@@ -6,7 +6,7 @@ import 'animate.css';
 const Banner = () => {
     return (
         <div>
-            <div className="hero bg-cyan-200/40 min-h-screen">
+            <div className="hero bg-cyan-200/40 min-h-[80vh]">
                 <div className="hero-content flex-col lg:flex-row">
                     <Image className="opacity-85" height={500} src={BannerImg} alt="Banner Img" loading="eager" />
                     <div>

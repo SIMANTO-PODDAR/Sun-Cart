@@ -5,7 +5,7 @@
         "brand": "SunShade",
         "price": 15,
         "rating": 4.7,
-        "stock": 15,
+        "stock": 26,
         "description": "Stylish UV protection sunglasses perfect for summer outings.",
         "image": "https://i.ibb.co.com/8nJMJzhv/Sunglasses.jpg",
         "category": "Accessories"
@@ -16,7 +16,7 @@
         "brand": "SkinCare Plus",
         "price": 18,
         "rating": 4.8,
-        "stock": 20,
+        "stock": 34,
         "description": "Hydrating sunscreen with aloe vera for full sun protection.",
         "image": "https://i.ibb.co.com/Zz9kFRfY/Sunscreen.jpg",
         "category": "Skincare"

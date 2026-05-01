@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className='grid sm:flex justify-around w-full'>
 
                         <div className='sm:text-left'>{/* Contact Info */}
-                            <h3 className='text-xl'>Contact Info</h3>
+                            <h3 className='text-xl underline'>Contact Info</h3>
                             <h2>Phone: 0123456789</h2>
                             <h2>Whatsapp: 0123456789</h2>
                             <h2>Email: suncart@gmail.com</h2>
@@ -22,7 +22,7 @@ const Footer = () => {
                         </div>
 
                         <div className='sm:text-left'>{/* Social Links */}
-                            <h3 className='text-xl'>Social Links</h3>
+                            <h3 className='text-xl underline'>Social Links</h3>
                             <div className='flex gap-4 justify-center mt-4'>
 
                                 <div
@@ -42,7 +42,7 @@ const Footer = () => {
 
                     </div>
                     <div>{/* Privacy policy */}
-                        <h3 className='text-xl'>Privacy Policy</h3>
+                        <h3 className='text-xl underline '>Privacy Policy</h3>
                         <p className='text-[10px]'>We value your privacy. SunCart collects only the necessary information to process orders and improve user experience. Your personal data will never be sold or shared with third parties, except when required by law. By using our platform, you agree to this privacy policy.</p>
 
                     </div>

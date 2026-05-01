@@ -10,6 +10,7 @@ const ProfilePage = () => {
     const user = session?.user;
     return (
         <div>
+            <h1 className="text-xl sm:text-3xl text-center font-bold text-cyan-700/70 my-2">Profile</h1>
             <div className="card bg-base-100 max-w-96 shadow-sm mx-auto mt-5">
                 <figure>
                     <Avatar className="h-25 w-25">
@@ -19,7 +20,7 @@ const ProfilePage = () => {
                     </Avatar>
                 </figure>
                 <div className="card-body">
-                    <h2 className="text-2xl font-bold flex items-center gap-1">Name: {user?.name}
+                    <h2 className="text-[20px] text-cyan-950 font-bold flex items-center gap-2">Name: {user?.name}
                         <span title="Email verification badge" className={`text-[15px] text-cyan-700 outline p-0.5 rounded-full
                             ${user?.emailVerified ? "grid" : "hidden"} `}><MdVerified /></span></h2>
 
