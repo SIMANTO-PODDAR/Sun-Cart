@@ -4,15 +4,11 @@ import { authClient } from "@/lib/auth-client";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { ProgressBar } from "react-loader-spinner";
 import { toast } from "react-toastify";
 
 const LogInPage = () => {
-
-    const router = useRouter();
-    const searchParams = useSearchParams();
 
     const [loader, setLoader] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -23,21 +19,19 @@ const LogInPage = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        const redirect = searchParams.get("redirect") || "/";
 
         const { data, error } = await authClient.signIn.email({
             email: email,
             password: password,
+            callbackURL: "/",
         });
 
         if (data) {
-            toast.success("Login successfully.")
-            setLoader(false);
-            router.push(redirect);
+            toast.success("Login successfully.");
         }
 
         if (error) {
-            toast.error(error.message)
+            toast.error(error.message);
         };
 
         setLoader(false);
