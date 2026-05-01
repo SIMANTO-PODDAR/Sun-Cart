@@ -15,8 +15,8 @@ const TopBrands = () => {
 
                 <div className="card bg-base-100 card-md shadow-sm">
                     <div className="card-body flex flex-col items-center">
-                        <Image src={GucciImg} alt="Gucci" 
-                        height={70} />
+                        <Image src={GucciImg} alt="Gucci"
+                            height={70} />
                         <p className="text-[18px]">Gucci</p>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ const TopBrands = () => {
                 <div className="card bg-base-100 card-md shadow-sm">
                     <div className="card-body flex flex-col items-center">
                         <Image src={LouisVuittonImg} alt="Louis Vuitton"
-                        height={70} />
+                            height={70} />
                         <p className="text-[18px]">Louis Vuitton</p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const TopBrands = () => {
                 <div className="card bg-base-100 card-md shadow-sm">
                     <div className="card-body flex flex-col items-center">
                         <Image src={AdidasImg} alt="Adidas"
-                        height={70} />
+                            height={70} />
                         <p className="text-[18px]">Adidas</p>
                     </div>
                 </div>

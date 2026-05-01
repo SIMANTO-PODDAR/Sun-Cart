@@ -134,7 +134,6 @@ const LogInPage = () => {
 
                 <h1 className="text-center font-bold text-xl opacity-70">Processing your request.</h1>
             </div>
-
         </div>
     );
 };

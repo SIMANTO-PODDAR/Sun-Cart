@@ -7,7 +7,7 @@ const PopularProducts = async () => {
 
     return (
         <div className="my-5">
-            <h1 className="text-3xl sm:text-5xl text-center font-bold text-cyan-700/70 my-2">Popular Products</h1>
+            <h1 className="text-3xl sm:text-5xl text-center font-bold text-cyan-700/70 my-3">Popular Products</h1>
 
             <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
                 {
