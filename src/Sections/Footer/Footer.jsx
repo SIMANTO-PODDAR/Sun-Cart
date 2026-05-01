@@ -7,21 +7,25 @@ const Footer = () => {
         <div className="bg-blue-300/70 sm:mt-15">
             <div className='max-w-300 mx-auto'>
 
-                <footer className="footer footer-horizontal footer-center p-10 border-b border-white/15">
-                    <Image src={FooterLogo} alt='Sun Cart Logo' className='scale-70 md:scale-100 w-87 h-37' />
-                    <p className='mt-3 text-sm font-bold' >SunCart - Summer Essentials Store</p>
+                <footer className="footer footer-horizontal footer-center p-10 border-b border-white/15 gap-5">
 
-                    <div className='grid sm:flex justify-around w-full'>
+                    <div>
+                        <Image src={FooterLogo} alt='Sun Cart Logo' className='scale-70 md:scale-100 w-87 h-37' />
+                        <p className='text-sm font-bold' >SunCart - Summer Essentials Store</p>
+                    </div>
+
+                    <div className='grid sm:flex justify-around w-full gap-5'>
 
                         <div className='sm:text-left'>{/* Contact Info */}
+
                             <h3 className='text-xl underline'>Contact Info</h3>
                             <h2>Phone: 0123456789</h2>
                             <h2>Whatsapp: 0123456789</h2>
                             <h2>Email: suncart@gmail.com</h2>
-
                         </div>
 
                         <div className='sm:text-left'>{/* Social Links */}
+
                             <h3 className='text-xl underline'>Social Links</h3>
                             <div className='flex gap-4 justify-center mt-4'>
 
@@ -39,11 +43,12 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div>{/* Privacy policy */}
+
+                    {/* Privacy policy */}
+                    <div className='max-w-[60vw] sm:max-w-[40vw] mx-5'>
                         <h3 className='text-xl underline '>Privacy Policy</h3>
-                        <p className='text-[10px]'>We value your privacy. SunCart collects only the necessary information to process orders and improve user experience. Your personal data will never be sold or shared with third parties, except when required by law. By using our platform, you agree to this privacy policy.</p>
+                        <p className='text-[10px] text-justify sm:text-center'>We value your privacy. SunCart collects only the necessary information to process orders and improve user experience. Your personal data will never be sold or shared with third parties, except when required by law. By using our platform, you agree to this privacy policy.</p>
 
                     </div>
 

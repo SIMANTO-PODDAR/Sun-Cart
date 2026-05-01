@@ -12,9 +12,18 @@ export async function proxy(request) {
         return NextResponse.next();
     }
 
-    return NextResponse.redirect(new URL('/login', request.url))
+
+    const loginUrl = new URL('/login', request.url)
+
+
+    loginUrl.searchParams.set(
+        'redirect',
+        request.nextUrl.pathname + request.nextUrl.search
+    )
+
+    return NextResponse.redirect(loginUrl)
 }
 
 export const config = {
-    matcher: ['/products', '/products/:id', '/profile', '/profile/update'],
+    matcher: ['/products/:id', '/profile', '/profile/update'],
 }
