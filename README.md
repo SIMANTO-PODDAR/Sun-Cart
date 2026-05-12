@@ -1,5 +1,11 @@
 # 🌞 SunCart – Summer Essentials Store
 
+## 🌐 Live URL
+
+🔗 **Live Demo:** [https://sun-cart.vercel.app/](https://sun-cart.vercel.app/)
+
+---
+
 ## 📌 Project Overview
 
 **SunCart** is a modern summer-themed eCommerce web application where users can explore and purchase seasonal products such as sunglasses, summer outfits, skincare items, and beach accessories. The platform focuses on a clean UI, smooth user experience, and secure authentication.
@@ -9,12 +15,6 @@
 ## 🎯 Purpose
 
 The goal of this project is to build a fully functional eCommerce frontend with authentication and protected routes using modern technologies like Next.js App Router and BetterAuth. It demonstrates real-world concepts like user login, product browsing, route protection, and profile management.
-
----
-
-## 🌐 Live URL
-
-🔗 **Live Demo:** [https://sun-cart.vercel.app/](https://sun-cart.vercel.app/)
 
 ---
 
